@@ -1,0 +1,76 @@
+#lineMenu
+{
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #0064b5;
+	height: 49px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.colonneMenu
+{
+	float: left;
+	font-size: 17px;
+	padding: 14px 20px;
+	background-color: transparent;
+	color: white;
+	transition: background-color 0.2s, padding 0.2s, font-size 0.2s,transform 0.2s;
+	cursor: pointer;
+}
+
+.animationButtonMenu:hover
+{
+	background-color: #0073be;
+	font-size: 19px;
+	padding: 13px 17px;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+}
+
+
+#lineSign
+{
+    list-style-type: none;
+	overflow: hidden;
+	background-color: #0073be;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.colonneSign
+{
+    float: right;
+	font-size: 15px;
+	padding: 10px 8px;
+	background-color: transparent;
+	color: white;
+	transition: font-size 0.2s,transform 0.2s;
+	cursor: pointer;
+}
+
+.underLineHover:after
+{
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -10px;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underLineHover:hover
+{
+
+}
+
+.underLineHover:hover:after
+{
+    width: 100%;
+}
