@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8"/>
+    </header>
+    <form method="post" action="./traitement.php" name="formulaire">
+        <h1>Session de surf</h1>
+
+        <fieldset>
+            <legend>Nom et Prénom</legend>
+            <input type="text" name="formulaire[nom]" placeholder="Nom">
+            <input type="text" name="formulaire[prenom]" placeholder="Prénom">
+        </fieldset>
+
+        <fieldset>
+            <legend>Lieu et période</legend>
+            <select name="spot" id="spot" placeholder="Spot">
+                <option value="ville1">Ville 1</option>
+                <option value="ville2">Ville 2</option>
+                <option value="ville3">Ville 3</option>
+            </select>
+
+            <label>Date de début</label>
+            <input type="date" name="date-debut" value="1776-10-01" min="1776-10-01" max="2100-12-31"/>
+            
+            <label>Date de fin</label>
+            <input type="date" name="date-fin" value="1776-10-01" min="1776-10-01" max="2100-12-31"/>
+            
+            <label>Heure début</label>
+            <input type="time" id="begin-time" name="begin-time" min="00:00" max=23:59 required>
+            
+            <label>Heure de fin</label>
+            <input type="time" id="bend-time" name="end-time" min="00:00" max=23:59 required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Produits utilisés</legend>
+            <input type="checkbox" name="creme_solaire" id="creme_solaire" /> 
+            
+        </fieldset>
+
+        <input type="submit" value="Envoyer" />
+    </form>
+</html>
