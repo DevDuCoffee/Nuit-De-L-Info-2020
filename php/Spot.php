@@ -1,11 +1,11 @@
 <?php
 
 
-class spot
+class Spot
 {
     private int $id;
     private string $nom;
     private Ville $ville;
-    private Meteo $meteo;
+    private MeteoSpot $meteo;
     private Pollution $pollution;
 }
