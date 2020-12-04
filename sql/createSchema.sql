@@ -1,89 +1,36 @@
--- Create a new database called 'bddsurf'
--- Connect to the 'master' database to run this snippet
-USE master
-GO
--- Create the new database if it does not exist already
-IF NOT EXISTS (
-    SELECT name
-        FROM sys.databases
-        WHERE name = N'bddsurf'
-)
 CREATE DATABASE bddsurf
-GO
 
--- Create a new table called 'joueur' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.joueur', 'U') IS NOT NULL
-DROP TABLE bddsurf.joueur
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.joueur
+CREATE TABLE joueur
 (
-    idJoueur INT NOT NULL PRIMARY KEY, -- primary key column
+    idJoueur INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     estVivant TINYINT,
     estImposteur TINYINT
-    -- specify more columns here
 );
-GO
-
--- Create a new table called 'UTILISATEUR' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.utilisateur', 'U') IS NOT NULL
-DROP TABLE bddsurf.utilisateur
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.utilisateur
+CREATE TABLE utilisateur
 (
-    idUtilisateur INT NOT NULL PRIMARY KEY, -- primary key column
-    nomUtilisateur VARCHAR,
-    prenomUtilisateur VARCHAR,
-    mailUtilisateur VARCHAR,
-    pseudoUtilisateur VARCHAR,
-    passwordUtilisateur VARCHAR
-    -- specify more columns here
+    idUtilisateur INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    nomUtilisateur VARCHAR(50),
+    prenomUtilisateur VARCHAR(50),
+    mailUtilisateur VARCHAR(50),
+    pseudoUtilisateur VARCHAR(50),
+    passwordUtilisateur VARCHAR(50)
 );
-GO
-
--- Create a new table called 'meteoville' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.meteoville', 'U') IS NOT NULL
-DROP TABLE bddsurf.meteoville
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.meteoville
+CREATE TABLE meteoville
 (
-    IdMeteoVille INT NOT NULL PRIMARY KEY, -- primary key column
+    IdMeteoVille INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     temperatureMeteoVille INT,
     ventMeteoVille INT
-    -- specify more columns here
 );
-GO
-
--- Create a new table called 'meteoSpot' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.meteoSpot', 'U') IS NOT NULL
-DROP TABLE bddsurf.meteoSpot
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.meteoSpot
+CREATE TABLE meteoSpot
 (
-    idMeteoSpot INT NOT NULL PRIMARY KEY, -- primary key column
+    idMeteoSpot INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     houleMeteoSpot INT,
     mareeMeteoSpot INT,
     ventMeteoSpot INT
-    -- specify more columns here
 );
-GO
-
--- Create a new table called 'produits' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.produits', 'U') IS NOT NULL
-DROP TABLE bddsurf.produits
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.produits
+CREATE TABLE produits
 (
-    idProduits INT NOT NULL PRIMARY KEY, -- primary key column
+    idProduits INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     estCremeSolaire TINYINT,
     estParfum TINYINT,
     estCremeHydratante TINYINT,
@@ -92,74 +39,72 @@ CREATE TABLE bddsurf.produits
     estCigarette TINYINT,
     estEngrais TINYINT,
     estPeinture TINYINT,
-    AutreProduit VARCHAR
-    -- specify more columns here
+    AutreProduit VARCHAR(50)
 );
-GO
-
--- Create a new table called 'ville' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.ville', 'U') IS NOT NULL
-DROP TABLE bddsurf.ville
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.ville
+CREATE TABLE pollution
 (
-    idVille INT NOT NULL PRIMARY KEY, -- primary key column
-    nomVille VARCHAR,
-    cpVille VARCHAR,
-    meteoVille INT NOT NULL
-    -- specify more columns here
-);
-GO
-
--- Create a new table called 'historique' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.historique', 'U') IS NOT NULL
-DROP TABLE bddsurf.historique
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.historique
-(
-    idHistorique INT NOT NULL PRIMARY KEY, -- primary key column
-    utilisateur INT NOT NULL,
-    spot INT NOT NULL,
-    pointage INT NOT NULL
-    -- specify more columns here
-);
-GO
-
--- Create a new table called 'pollution' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.pollution', 'U') IS NOT NULL
-DROP TABLE bddsurf.pollution
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.pollution
-(
-    idPollution INT NOT NULL PRIMARY KEY, -- primary key column
+    idPollution INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     niveauPollution INT,
-    descriptionPollution VARCHAR
-    -- specify more columns here
+    descriptionPollution VARCHAR(50)
 );
-GO
-
--- Create a new table called 'spot' in schema 'bddsurf'
--- Drop the table if it already exists
-IF OBJECT_ID('bddsurf.spot', 'U') IS NOT NULL
-DROP TABLE bddsurf.spot
-GO
--- Create the table in the specified schema
-CREATE TABLE bddsurf.spot
+CREATE TABLE ville
 (
-    idSpot INT NOT NULL PRIMARY KEY, -- primary key column
-    nomSpot VARCHAR,
+    idVille INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    nomVille VARCHAR(50),
+    cpVille VARCHAR(50),
+    meteoVille INT NOT NULL,
+    CONSTRAINT fk_meteoville
+        FOREIGN KEY (meteoVille)
+        REFERENCES meteoville(IdMeteoVille)
+);
+CREATE TABLE pointage
+(
+    idPointage INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    nbBaigneur INT,
+    nbPratiquant INT,
+    nbBateauPeche INT,
+    nbBateauLoisir INT,
+    nbBateauVoile INT,
+    produits INT NOT NULL,
+    niveauDechet INT,
+    CONSTRAINT fk_produitsPointage
+        FOREIGN KEY (produits)
+        REFERENCES produits(idProduits)
+);
+CREATE TABLE spot
+(
+    idSpot INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    nomSpot VARCHAR(50),
     villeSpot INT NOT NULL,
     meteoSpot INT NOT NULL,
-    pollutionSpot INT NOT NULL
-    -- specify more columns here
+    pollutionSpot INT NOT NULL,
+    CONSTRAINT fk_villeSpot
+        FOREIGN KEY (villeSpot)
+        REFERENCES ville(idVille),
+    CONSTRAINT fk_meteoSpot
+            FOREIGN KEY (meteoSpot)
+            REFERENCES meteoSpot(idMeteoSpot),
+    CONSTRAINT fk_pollutionSpot
+        FOREIGN KEY (pollutionSpot)
+        REFERENCES pollution(idPollution)
 );
-GO
+CREATE TABLE historique
+(
+    idHistorique INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    utilisateur INT NOT NULL,
+    spot INT NOT NULL,
+    pointage INT NOT NULL,
+    CONSTRAINT fk_user
+        FOREIGN KEY (utilisateur)
+        REFERENCES utilisateur(idUtilisateur),
+    CONSTRAINT fk_spot
+        FOREIGN KEY (spot)
+        REFERENCES spot(idSpot),
+    CONSTRAINT fk_pointage
+        FOREIGN KEY (pointage)
+        REFERENCES pointage(idPointage)
+);
+
 
 
 
