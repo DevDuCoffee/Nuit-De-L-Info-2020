@@ -1,6 +1,7 @@
 CREATE TABLE joueur
 (
     idJoueur INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
+    nomJoueur VARCHAR(50),
     estVivant TINYINT,
     estImposteur TINYINT
 ) ENGINE=InnoDB;
