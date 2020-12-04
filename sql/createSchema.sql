@@ -1,11 +1,9 @@
-CREATE DATABASE bddsurf
-
 CREATE TABLE joueur
 (
     idJoueur INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     estVivant TINYINT,
     estImposteur TINYINT
-);
+) ENGINE=InnoDB;
 CREATE TABLE utilisateur
 (
     idUtilisateur INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -14,20 +12,20 @@ CREATE TABLE utilisateur
     mailUtilisateur VARCHAR(50),
     pseudoUtilisateur VARCHAR(50),
     passwordUtilisateur VARCHAR(50)
-);
+) ENGINE=InnoDB;
 CREATE TABLE meteoville
 (
     IdMeteoVille INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     temperatureMeteoVille INT,
     ventMeteoVille INT
-);
+) ENGINE=InnoDB;
 CREATE TABLE meteoSpot
 (
     idMeteoSpot INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     houleMeteoSpot INT,
     mareeMeteoSpot INT,
     ventMeteoSpot INT
-);
+) ENGINE=InnoDB;
 CREATE TABLE produits
 (
     idProduits INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -40,13 +38,13 @@ CREATE TABLE produits
     estEngrais TINYINT,
     estPeinture TINYINT,
     AutreProduit VARCHAR(50)
-);
+) ENGINE=InnoDB;
 CREATE TABLE pollution
 (
     idPollution INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
     niveauPollution INT,
     descriptionPollution VARCHAR(50)
-);
+) ENGINE=InnoDB;
 CREATE TABLE ville
 (
     idVille INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -56,7 +54,7 @@ CREATE TABLE ville
     CONSTRAINT fk_meteoville
         FOREIGN KEY (meteoVille)
         REFERENCES meteoville(IdMeteoVille)
-);
+) ENGINE=InnoDB;
 CREATE TABLE pointage
 (
     idPointage INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -70,7 +68,7 @@ CREATE TABLE pointage
     CONSTRAINT fk_produitsPointage
         FOREIGN KEY (produits)
         REFERENCES produits(idProduits)
-);
+) ENGINE=InnoDB;
 CREATE TABLE spot
 (
     idSpot INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -87,7 +85,7 @@ CREATE TABLE spot
     CONSTRAINT fk_pollutionSpot
         FOREIGN KEY (pollutionSpot)
         REFERENCES pollution(idPollution)
-);
+) ENGINE=InnoDB;
 CREATE TABLE historique
 (
     idHistorique INT PRIMARY KEY NOT NULL AUTO_INCREMENT, -- primary key column
@@ -103,7 +101,7 @@ CREATE TABLE historique
     CONSTRAINT fk_pointage
         FOREIGN KEY (pointage)
         REFERENCES pointage(idPointage)
-);
+) ENGINE=InnoDB;
 
 
 
