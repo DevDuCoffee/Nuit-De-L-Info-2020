@@ -10,125 +10,151 @@
         <h1>Session de surf</h1>
 
         <fieldset id="name_fieldset">
-            <legend>Nom et Prénom</legend>
+            <legend> Nom et Prénom </legend>
             <input type="text" name="formulaire[nom]" placeholder="Nom" required>
             <input type="text" name="formulaire[prenom]" placeholder="Prénom" required>
         </fieldset>
 
         <fieldset id="localisation_fieldset">
-            <legend>Lieu et période</legend>
-            <select name="spot" id="spot" placeholder="Spot" required>
+            <legend> Lieu et période </legend>
+            <label for="spot">Spot</label>
+            <select name="spot" id="spot" required>
                 <option value="ville1">Ville 1</option>
                 <option value="ville2">Ville 2</option>
                 <option value="ville3">Ville 3</option>
             </select>
-
+            <br />
             <label>Date de début</label>
             <input type="date" name="date-debut" value="1776-10-01" min="1776-10-01" max="2100-12-31"/>
+            <br />
             
             <label>Date de fin</label>
             <input type="date" name="date-fin" value="1776-10-01" min="1776-10-01" max="2100-12-31"/>
-            
+            <br />
+
             <label>Heure début</label>
             <input type="time" id="begin-time" name="begin-time" min="00:00" max=23:59 required>
-            
+            <br />
+
             <label>Heure de fin</label>
             <input type="time" id="bend-time" name="end-time" min="00:00" max=23:59 required>
 
         </fieldset>
 
         <fieldset id="product_fieldset">
-            <legend>Produits utilisés</legend>
+            <legend> Produits utilisés </legend>
             
-            <input type="checkbox" name="creme_solaire" id="creme_solaire" /> 
-            <label for="creme_solaire">Crème solaire</label>
-
-            <input type="checkbox" name="parfum" id="parfum" /> 
-            <label for="parfum">Parfum/Déodorant</label>
-
-            <input type="checkbox" name="creme_hydratante" id="creme_hydratante" /> 
-            <label for="creme_hydratante">Crème hydratante</label>
+            <div>
+                <input type="checkbox" name="creme_solaire" id="creme_solaire" /> 
+                <label for="creme_solaire">Crème solaire</label>
+            </div>
             
-            <input type="checkbox" name="maquillage" id="maquillage" /> 
-            <label for="maquillage">Maquillage</label>
-
-            <input type="checkbox" name="cigarettes" id="cigarettes" /> 
-            <label for="cigarettes">Cigarettes</label>
-
-            <input type="checkbox" name="engrais" id="engrais" /> 
-            <label for="engrais">Engrais/Pesticides</label>
+            <div>
+                <input type="checkbox" name="parfum" id="parfum" /> 
+                <label for="parfum">Parfum/Déodorant</label>
+            </div>
             
-            <input type="checkbox" name="peinture" id="peinture" /> 
-            <label for="peinture">Peinture</label>
+            <div>
+                <input type="checkbox" name="creme_hydratante" id="creme_hydratante" /> 
+                <label for="creme_hydratante">Crème hydratante</label>
+            </div>
+            
 
-            <input type="checkbox" name="autres_produits" id="autres_produits" /> 
-            <label for="autres_produits">Autres</label>
+            <div>
+                <input type="checkbox" name="maquillage" id="maquillage" /> 
+                <label for="maquillage">Maquillage</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="cigarettes" id="cigarettes" /> 
+                <label for="cigarettes">Cigarettes</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="engrais" id="engrais" /> 
+                <label for="engrais">Engrais/Pesticides</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="peinture" id="peinture" /> 
+                <label for="peinture">Peinture</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="autres_produits" id="autres_produits" /> 
+                <label for="autres_produits">Autres</label>
+            </div>
 
         </fieldset>
 
 
         <fieldset id="population_fieldset">
-            <legend>Fréquentation</legend>
+            <legend> Fréquentation </legend>
             
             <label for="baigneurs">Nombre de baigneurs</label>
             <input type="number" name="nb_baigneurs" id="baigneurs" value=0 min=0 max=100/>
-            
+            <br />
             <label for="baigneurs">Nombre de pratiquants d'activités nautiques</label>
             <input type="number" name="pratiquant" id="pratiquant" value=0 min=0 max=100/> 
-            
+            <br />
             <label for="baigneurs">Bâteaux de pêche</label>
             <input type="number" name="bateau_peche" id="bateau_peche" value=0 min=0 max=100/> 
-            
+            <br />
             <label for="baigneurs">Bâteaux de loisir</label>
             <input type="number" name="bateau_loisir" id="bateau_loisir" value=0 min=0 max=100/> 
-            
+            <br />
             <label for="baigneurs">Bâteaux à voile</label>
             <input type="number" name="bateau_voile" id="bateau_voile" value=0 min=0 max=100/> 
             
         </fieldset>
 
         <fieldset id="pollution_fieldset">
-            <legend>Pollution</legend>
+            <legend> Pollution </legend>
             
-            <label for="quantite_microplastique">Microplastique</label>
-            <select name="quantite_microplastique" id="quantite_microplastique" >
-                <option value="Aucun">Aucun</option>
-                <option value="un_peu">Un peu</option>
-                <option value="moyen">Moyen</option>
-                <option value="beaucoup">Beaucoup</option>
-            </select>
+            <div>
+                <label for="quantite_microplastique">Microplastique</label>
+                <select name="quantite_microplastique" id="quantite_microplastique" >
+                    <option value="Aucun">Aucun</option>
+                    <option value="un_peu">Un peu</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="beaucoup">Beaucoup</option>
+                </select>
+            </div>
 
-            
-            <label for="dechets_select">Gros déchets plastiques</label>
-            <select name="dechets_select" id="dechets_select" >
-                <option value="Aucun">Aucun</option>
-                <option value="un_peu">Un peu</option>
-                <option value="moyen">Moyen</option>
-                <option value="beaucoup">Beaucoup</option>
-            </select>
+            <div>
+                <label for="dechets_select">Gros déchets plastiques</label>
+                <select name="dechets_select" id="dechets_select" >
+                    <option value="Aucun">Aucun</option>
+                    <option value="un_peu">Un peu</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="beaucoup">Beaucoup</option>
+                </select>
+            <div>
 
+            <div>
+                <label for="petrole_select">Pétrole</label>
+                <select name="petrole_select" id="petrole_select">
+                    <option value="Aucun">Aucun</option>
+                    <option value="un_peu">Un peu</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="beaucoup">Beaucoup</option>
+                </select>
+            <div>
 
-            <label for="petrole_select">Pétrole</label>
-            <select name="petrole_select" id="petrole_select">
-                <option value="Aucun">Aucun</option>
-                <option value="un_peu">Un peu</option>
-                <option value="moyen">Moyen</option>
-                <option value="beaucoup">Beaucoup</option>
-            </select>
-
-
-            <label for="autres_select">Autres (Velo, toilettes...)</label>
-            <select name="autres_select" id="autres_select">
-                <option value="Aucun">Aucun</option>
-                <option value="un_peu">Un peu</option>
-                <option value="moyen">Moyen</option>
-                <option value="beaucoup">Beaucoup</option>
-            </select>
+            <div>
+                <label for="autres_select">Autres (Vélos, toilettes...)</label>
+                <select name="autres_select" id="autres_select">
+                    <option value="Aucun">Aucun</option>
+                    <option value="un_peu">Un peu</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="beaucoup">Beaucoup</option>
+                </select>
+            <div>
             
         </fieldset>
 
+        <input type="submit" value="Envoyer" id="submit" text-align="center"/>
 
-        <input type="submit" value="Envoyer" />
     </form>
     </body>
 </html>

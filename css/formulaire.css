@@ -1,24 +1,72 @@
+html{
+    background-image: none;
+}
+
 h1 {
+    font-size: 4em;
+    font-style: italic;
+    font-weight: bold;
     text-align: center;
 }
 
 legend {
     margin: 0 auto;
     margin-top: 3%;
+    font-size:3em;
 }
 
 fieldset{
+    text-align: justify;
     margin: 0 auto;
-    width: 70%;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: aqua;
+    width: 50%;
 }
 
-form {
+form{
     text-align: center;
 }
 
-input[type="submit"]{
+
+input[type="text"]{
     font-size: 15px;
     padding: 5px;
 }
 
 
+input[type="submit"]{
+    text-align:center;
+    font-size: 15px;
+    margin-top:10px;
+    padding: 5px;
+}
+
+div{
+    margin: 10px 0px 10px 0px;
+}
+
+#div_submit{
+    align-content: center;
+}
+
+form select input{
+    margin-bottom: 10px;
+}
+
+#localisation_fieldset input{
+    margin:10px;
+}
+
+#localisation_fieldset select{
+    margin:10px;
+}
+
+#population_fieldset input{
+    margin:10px;
+}
+
+#product_fieldset label{
+    margin-right: 10px;
+}
