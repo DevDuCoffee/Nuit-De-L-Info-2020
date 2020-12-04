@@ -1,0 +1,5 @@
+https://github.com/swrobel/meta-surf-forecast
+
+https://fr.magicseaweed.com/developer/forecast-api
+
+https://www.worldweatheronline.com/developer/api/docs/marine-weather-api.aspx
