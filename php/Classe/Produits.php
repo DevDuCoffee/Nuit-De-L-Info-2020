@@ -14,7 +14,7 @@ class Produits
     private bool $estPeinture;
     private string $autreProduit;
 
-    function __contruct(int $id,bool $estCremeSolaire,bool $estCremeParfum,bool $estCremeHydratante,bool $estMaquillage,
+    function __construct(int $id,bool $estCremeSolaire,bool $estCremeParfum,bool $estCremeHydratante,bool $estMaquillage,
                         bool $estEssence,bool $estCigarette,bool $estEngrais,bool $estPeinture,string $autreProduit){
         $this->id = $id;
         $this->estCremeSolaire = $estCremeSolaire;
