@@ -1,14 +1,5 @@
 /* BASIC */
 
-html {
-    background-color: #56baed;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-}
-
 a {
     color: #92badd;
     display:inline-block;
@@ -219,6 +210,18 @@ input[type=text]::placeholder {
     -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
+
+.fondu.cinquieme {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.fondu.sixieme {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+
 
 /* Simple CSS3 Fade-in Animation */
 .souligne:after {
