@@ -108,7 +108,10 @@ CREATE TABLE bddsurf.ville
     idVille INT NOT NULL PRIMARY KEY, -- primary key column
     nomVille VARCHAR,
     cpVille VARCHAR,
-    meteoVille INT NOT NULL
+    meteoVille INT NOT NULL,
+    CONSTRAINT fk_meteoville
+        FOREIGN KEY (meteoVille)
+        REFERENCES bddsurf.meteoville(IdMeteoVille)
     -- specify more columns here
 );
 GO
@@ -124,7 +127,10 @@ CREATE TABLE bddsurf.historique
     idHistorique INT NOT NULL PRIMARY KEY, -- primary key column
     utilisateur INT NOT NULL,
     spot INT NOT NULL,
-    pointage INT NOT NULL
+    pointage INT NOT NULL,
+    CONSTRAINT fk_user
+        FOREIGN KEY (utilisateur)
+        REFERENCES bddsurf.utilisateur(idUtilisateur)
     -- specify more columns here
 );
 GO
