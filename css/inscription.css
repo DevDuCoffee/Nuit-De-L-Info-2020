@@ -1,7 +1,7 @@
 /* BASIC */
 
 a {
-    color: #92badd;
+    color: #197abb;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -41,6 +41,13 @@ h2 {
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
+    border-color: #0073be;
+    border-style: solid;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-radius: 10px;
 }
 
 #pied {
@@ -60,7 +67,7 @@ h2.inactive {
 
 h2.active {
     color: #0d0d0d;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #197abb;
 }
 
 
@@ -68,7 +75,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
+    background-color: #197abb;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -88,7 +95,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-    background-color: #39ace7;
+    background-color: #197abb;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -120,7 +127,7 @@ input[type=text] {
 
 input[type=text]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #197abb;
 }
 
 input[type=text]::placeholder {
@@ -230,7 +237,7 @@ input[type=text]::placeholder {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #56baed;
+    background-color: #197abb;
     content: "";
     transition: width 0.2s;
 }
