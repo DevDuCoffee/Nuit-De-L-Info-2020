@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5db01d37-ed98-4df0-8a3f-85093d5456ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inscription.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connexion.html" beforeDir="false" afterPath="$PROJECT_DIR$/connexion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/connexion.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/connexion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/creation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/creation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Hystorique.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Hystorique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Joueur.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Joueur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/MeteoSpot.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/MeteoSpot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/MeteoVille.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/MeteoVille.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Pointage.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Pointage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lA5FnXumkMauI2VLRUvRUzSLTD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,5 +79,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
