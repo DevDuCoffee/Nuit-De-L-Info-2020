@@ -10,4 +10,12 @@ class Utilisateur
     private string $mail;
     private string $password;
 
+    function __contruct(int $id,string $nom,string $prenom,string $pseudo,string $mail,string $password){
+        $this->id = $id;
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->pseudo = $pseudo;
+        $this->mail = $mail;
+        $this->password = $password;
+    }
 }
