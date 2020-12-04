@@ -15,7 +15,7 @@ h2 {
     text-transform: uppercase;
     display:inline-block;
     margin: 40px 8px 10px 8px;
-    color: #cccccc;
+    color: white;
 }
 
 
@@ -34,7 +34,7 @@ h2 {
 
 #contenu {
 
-    background: #fff;
+    background: rgb(255, 255, 255);
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -43,13 +43,22 @@ h2 {
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
+    border-color: #0073be;
+    border-style: solid;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-radius: 10px;
 }
 
 #pied {
     background-color: #f6f6f6;
-    border-top: 1px solid #dce8f1;
+    border-top: 1px solid #197abb;
     padding: 25px;
     text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
@@ -101,7 +110,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
     transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
