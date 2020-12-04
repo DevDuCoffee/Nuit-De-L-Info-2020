@@ -26,7 +26,7 @@
 	padding: 13px 17px;
 }
 
-a
+aMenu
 {
 	color: white;
 	text-decoration: none;
@@ -63,11 +63,6 @@ a
     bottom: -10px;
     content: "";
     transition: width 0.2s;
-}
-
-.underLineHover:hover
-{
-
 }
 
 .underLineHover:hover:after
