@@ -2,17 +2,20 @@
 <html>
     <header>
         <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/formulaire.css" />
     </header>
+
+    <body>
     <form method="post" action="./traitement.php" name="formulaire">
         <h1>Session de surf</h1>
 
-        <fieldset>
+        <fieldset id="name_fieldset">
             <legend>Nom et Prénom</legend>
             <input type="text" name="formulaire[nom]" placeholder="Nom" required>
             <input type="text" name="formulaire[prenom]" placeholder="Prénom" required>
         </fieldset>
 
-        <fieldset>
+        <fieldset id="localisation_fieldset">
             <legend>Lieu et période</legend>
             <select name="spot" id="spot" placeholder="Spot" required>
                 <option value="ville1">Ville 1</option>
@@ -34,7 +37,7 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="product_fieldset">
             <legend>Produits utilisés</legend>
             
             <input type="checkbox" name="creme_solaire" id="creme_solaire" /> 
@@ -64,7 +67,7 @@
         </fieldset>
 
 
-        <fieldset>
+        <fieldset id="population_fieldset">
             <legend>Fréquentation</legend>
             
             <label for="baigneurs">Nombre de baigneurs</label>
@@ -84,38 +87,39 @@
             
         </fieldset>
 
-        <fieldset>
+        <fieldset id="pollution_fieldset">
             <legend>Pollution</legend>
             
-            <input type="checkbox" name="microplastique" id="microplastique" /> 
             <label for="quantite_microplastique">Microplastique</label>
             <select name="quantite_microplastique" id="quantite_microplastique" >
+                <option value="Aucun">Aucun</option>
                 <option value="un_peu">Un peu</option>
                 <option value="moyen">Moyen</option>
                 <option value="beaucoup">Beaucoup</option>
             </select>
 
-            <input type="checkbox" name="dechets" id="dechets" /> 
+            
             <label for="dechets_select">Gros déchets plastiques</label>
             <select name="dechets_select" id="dechets_select" >
+                <option value="Aucun">Aucun</option>
                 <option value="un_peu">Un peu</option>
                 <option value="moyen">Moyen</option>
                 <option value="beaucoup">Beaucoup</option>
             </select>
 
 
-            <input type="checkbox" name="petrole" id="petrole" /> 
             <label for="petrole_select">Pétrole</label>
             <select name="petrole_select" id="petrole_select">
+                <option value="Aucun">Aucun</option>
                 <option value="un_peu">Un peu</option>
                 <option value="moyen">Moyen</option>
                 <option value="beaucoup">Beaucoup</option>
             </select>
 
 
-            <input type="checkbox" name="autres_pollution" id="autres_pollution" /> 
             <label for="autres_select">Autres (Velo, toilettes...)</label>
             <select name="autres_select" id="autres_select">
+                <option value="Aucun">Aucun</option>
                 <option value="un_peu">Un peu</option>
                 <option value="moyen">Moyen</option>
                 <option value="beaucoup">Beaucoup</option>
@@ -126,4 +130,5 @@
 
         <input type="submit" value="Envoyer" />
     </form>
+    </body>
 </html>
