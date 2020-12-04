@@ -22,6 +22,6 @@ class Pointage
         $this->bateauLoisir=$bateauLoisir;
         $this->bateauVoile=$bateauVoile;
         $this->produit=$produit;
-        $this->niveauDechet=$niveauDechet;
+        $this->niveauDechet=$niveauDechet; 
     }
 }
