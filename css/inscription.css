@@ -67,7 +67,7 @@ h2.inactive {
 
 h2.active {
     color: #0d0d0d;
-    border-bottom: 2px solid #197abb;
+    border-bottom: 2px solid #0073be;
 }
 
 
@@ -75,7 +75,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #197abb;
+    background-color: #0073be;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -91,11 +91,12 @@ input[type=button], input[type=submit], input[type=reset]  {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, transform 0.2;
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     background-color: #197abb;
+    font-size: 18px;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -237,7 +238,7 @@ input[type=text]::placeholder, input[type=password]::placeholder {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #197abb;
+    background-color: #0073be;
     content: "";
     transition: width 0.2s;
 }
